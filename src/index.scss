@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$custom-color: aqua;
+
+.demo {
+    color: $custom-color;
+}

@@ -1,0 +1,143 @@
+/* Main container styling */
+.booking-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* Title styling */
+.page-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Seat layout container */
+.seat-layout {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  max-width: 1100px;
+}
+
+/* Header row styling */
+.seat-column-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  text-align: center;
+  font-weight: bold;
+  color: #666;
+  font-size: 0.85rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+/* Seat rows */
+.seat-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .seat-row-label {
+    font-weight: bold;
+    width: 30px;
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+  }
+
+  .seat-row-seats {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+  }
+}
+
+/* Seat styling */
+.seat {
+  border: 1px solid #ccc;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  color: #333;
+  background-color: #f9f9f9;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.seat:hover {
+  background-color: #e0e0e0;
+}
+
+/* Booked seat styling */
+.seat__booked {
+  background-color: #ff7043;
+  cursor: not-allowed;
+  color: white;
+  border-color: #ff7043;
+}
+
+/* Selected seat styling */
+.seat__selected {
+  background-color: #66bb6a;
+  color: white;
+  border-color: #66bb6a;
+}
+
+/* Selected seats summary */
+.selected-seats-summary {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.selected-seats-summary h2 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.selected-seats-summary .selected-seats-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.selected-seats-summary .selected-seat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  color: #444;
+  font-weight: bold;
+}
+
+.selected-seats-summary .total-price {
+  font-size: 1.2rem;
+  text-align: right;
+  margin-top: 15px;
+  color: #333;
+}
+
+.selected-seats-summary .total-price span {
+  color: #1976d2;
+  font-weight: bold;
+}
