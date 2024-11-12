@@ -1,0 +1,35 @@
+===== Buoi 1 ======
+* SPA
+* Component
+* Rendering Element: {}
+
+===== Buoi 2 ======
+* Handling Events: onlick
+    - No Params
+    - Params
+
+* State: nếu như state thay đổi giá trị => component chạy lại
+* List key
+
+
+===== Buoi 3 ======
+* Communication
+    * Props: truyền data từ component cha => component con
+    * Lifting state up: truyền data từ component con => component cha
+
+* Shopping Phones
+
+===== Buoi 4 ======
+Shopping Phones
+
+===== Buoi 5 ======
+Form validation
+
+===== Buoi 6 ======
+React Router DOM
+
+===== Buoi 7 ======
+Redux
+
+===== Buoi 8 ======
+ Booking ticket
