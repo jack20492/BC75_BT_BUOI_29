@@ -1,4 +1,4 @@
-import data from "./../danhSachGhe.json";
+import data from "../danhSachGhe.json";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -6,29 +6,24 @@ const initialState = {
   listSeatSelected: [],
 };
 
-const bookingTicketReducer = createSlice({
-  name: "bookingTicketReducer",
+const bookingTicketSlice = createSlice({
+  name: "bookingTicket",
   initialState,
   reducers: {
-    setBookingSeat: (state, action) => {
-      const { payload } = action;
-
-      // Tim vi tri ghe trong mang listSeatSelected
-      const index = state.listSeatSelected.findIndex(
-        (seat) => seat.soGhe === payload.soGhe
+    toggleSeatSelection: (state, action) => {
+      const seatIndex = state.listSeatSelected.findIndex(
+        (seat) => seat.soGhe === action.payload.soGhe
       );
 
-      if (index !== -1) {
-        // Xoa ghe khoi mang
-        state.listSeatSelected.splice(index, 1);
+      if (seatIndex !== -1) {
+        state.listSeatSelected.splice(seatIndex, 1);
       } else {
-        // Them ghe vao mang
-        state.listSeatSelected.push(payload);
+        state.listSeatSelected.push(action.payload);
       }
     },
   },
 });
 
-export const { setBookingSeat } = bookingTicketReducer.actions;
+export const { toggleSeatSelection } = bookingTicketSlice.actions;
 
-export default bookingTicketReducer.reducer;
+export default bookingTicketSlice.reducer;
