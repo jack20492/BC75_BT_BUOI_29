@@ -52,30 +52,6 @@ export default function Header() {
                 Home
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="about"
-                className={({ isActive }) => (isActive ? "text-blue-700" : "")}
-              >
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="list-movie"
-                className={({ isActive }) => (isActive ? "text-blue-700" : "")}
-              >
-                List Movie
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="shopping-phone"
-                className={({ isActive }) => (isActive ? "text-blue-700" : "")}
-              >
-                Shopping Phone
-              </NavLink>
-            </li>
           </ul>
         </div>
       </div>

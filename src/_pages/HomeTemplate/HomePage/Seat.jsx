@@ -1,22 +1,21 @@
 import "./Seat.scss";
 import { useState } from "react";
-import { setBookingSeat } from "./duck/reducer";
 import { useDispatch } from "react-redux";
+import { toggleSeatSelection } from "./duck/reducer";
 
-export default function Seat(props) {
+export default function Seat({ seat }) {
   const dispatch = useDispatch();
-  const { seat } = props;
-  const [isSelect, setIsSelect] = useState(false);
+  const [isSelected, setIsSelected] = useState(false);
 
   const handleSelectSeat = () => {
-    setIsSelect(!isSelect);
-    dispatch(setBookingSeat(seat));
+    setIsSelected((prev) => !prev);
+    dispatch(toggleSeatSelection(seat));
   };
 
   return (
     <button
       onClick={handleSelectSeat}
-      className={`${isSelect ? "seat__selected" : ""} mx-5 seat ${
+      className={`seat mx-5 ${isSelected ? "seat__selected" : ""} ${
         seat.daDat ? "seat__booked" : ""
       }`}
       disabled={seat.daDat}
